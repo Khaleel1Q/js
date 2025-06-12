@@ -63,4 +63,26 @@ setTimeout(()=>{
     throttled('1111');//prints
 },2000)
 
+// rest Operator
+const [first,second, ...rest]  = [1,2,3,4,5,6,7];
+console.log(first)
+console.log(second)
+console.log(rest)
+
+function sum(...numbers){
+    console.log(numbers)
+    return numbers.reduce((a,c)=>a+c, 0)
+} 
+
+const total = sum(1,2,3,4,5,6,7,8,9)
+console.log(total)
+
+// spread Operator
+
+const arr1 = [1,2,3];
+const arr2 = [...arr1,4,5,6];
+console.log(arr2)
+const numbers = [22,33,11,1,2,4,1,6,76,32,43];
+console.log(Math.max(...numbers))
+
 
